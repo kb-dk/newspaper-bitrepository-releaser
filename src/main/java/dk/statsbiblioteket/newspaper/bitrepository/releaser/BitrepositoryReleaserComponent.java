@@ -43,7 +43,7 @@ public class BitrepositoryReleaserComponent extends AbstractRunnableComponent {
             return;
         }
 
-        log.info("Finished ingest of batch '" + batch.getFullID() + "'");
+        log.info("Finished release of batch '" + batch.getFullID() + "'");
     }
 
     /**
