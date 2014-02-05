@@ -84,7 +84,7 @@ public class BitrepositoryIngesterComponentIT {
     private void loadConfiguration() throws Exception {
         String generalPropertiesPath = System.getProperty("integration.test.newspaper.properties");
         String propertiesDir = generalPropertiesPath.substring(0, generalPropertiesPath.lastIndexOf("/"));
-        pathToConfig = propertiesDir + "/newspaper-bitrepository-ingester-config";
+        pathToConfig = propertiesDir + "/newspaper-bitrepository-releaser-config";
         pathToTestBatch = System.getProperty("integration.test.newspaper.testdata");
         properties.load(new FileInputStream(pathToConfig + "/config.properties"));
     }
