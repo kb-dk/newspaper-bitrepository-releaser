@@ -10,12 +10,12 @@ import org.slf4j.LoggerFactory;
 
 import dk.statsbiblioteket.medieplatform.autonomous.Batch;
 import dk.statsbiblioteket.medieplatform.autonomous.ResultCollector;
-import dk.statsbiblioteket.medieplatform.autonomous.SBOIBasedAbstractRunnableComponent;
+import dk.statsbiblioteket.medieplatform.autonomous.TreeProcessorAbstractRunnableComponent;
 
 /**
  * Releases a batch from it's forced online status in the bitrepository
  */
-public class BitrepositoryReleaserComponent extends SBOIBasedAbstractRunnableComponent {
+public class BitrepositoryReleaserComponent extends TreeProcessorAbstractRunnableComponent {
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     public static final String RELEASE_ONLINE_COMMAND = "bitrepository.ingester.releaseOnlineCommand";
