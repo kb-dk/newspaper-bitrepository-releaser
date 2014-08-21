@@ -86,21 +86,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <configuration>
-          <systemPropertyVariables>
-            <integration.test.newspaper.testdata>
-              ${integration.test.newspaper.testdata}
-            </integration.test.newspaper.testdata>
-            <bitrepository.ingester.config>
-              ${bitrepository.ingester.config}
-            </bitrepository.ingester.config>
-          </systemPropertyVariables>
-          <forkCount>0</forkCount>
-        </configuration>
-      </plugin>
+
     </plugins>
   </build>
 
