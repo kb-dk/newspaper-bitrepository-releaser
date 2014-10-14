@@ -35,7 +35,7 @@ public class BitrepositoryIngesterComponentIT {
         batch.setBatchID(TEST_BATCH_ID);
         batch.setRoundTripNumber(1);
 
-        bitrepositoryReleaserComponent.doWorkOnBatch(batch, resultCollector);
+        bitrepositoryReleaserComponent.doWorkOnItem(batch, resultCollector);
         
         assertTrue(resultCollector.isSuccess());
     }
@@ -56,7 +56,7 @@ public class BitrepositoryIngesterComponentIT {
         batch.setBatchID(TEST_BATCH_ID);
         batch.setRoundTripNumber(1);
 
-        bitrepositoryReleaserComponent.doWorkOnBatch(batch, resultCollector);
+        bitrepositoryReleaserComponent.doWorkOnItem(batch, resultCollector);
         
         assertFalse(resultCollector.isSuccess());
         resultCollector.toReport().contains("Failed to release batch from online status.");
@@ -77,7 +77,7 @@ public class BitrepositoryIngesterComponentIT {
         batch.setBatchID(TEST_BATCH_ID);
         batch.setRoundTripNumber(1);
 
-        bitrepositoryReleaserComponent.doWorkOnBatch(batch, resultCollector);
+        bitrepositoryReleaserComponent.doWorkOnItem(batch, resultCollector);
     }
 
     @BeforeMethod(alwaysRun = true)

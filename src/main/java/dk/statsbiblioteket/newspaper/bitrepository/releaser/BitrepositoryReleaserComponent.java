@@ -33,7 +33,7 @@ public class BitrepositoryReleaserComponent extends TreeProcessorAbstractRunnabl
      * Release the batch from its force online status
      */
     @Override
-    public void doWorkOnBatch(Batch batch, ResultCollector resultCollector) throws Exception {
+    public void doWorkOnItem(Batch batch, ResultCollector resultCollector) throws Exception {
         String releaseOnlineCommand = getProperties().getProperty(RELEASE_ONLINE_COMMAND);
         log.info("Attempting to release batch: '" + batch.getFullID() + "'");
         
