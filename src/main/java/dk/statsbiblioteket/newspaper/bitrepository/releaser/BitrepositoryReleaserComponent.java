@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import dk.statsbiblioteket.medieplatform.autonomous.AbstractRunnableComponent;
 import dk.statsbiblioteket.medieplatform.autonomous.Batch;
 import dk.statsbiblioteket.medieplatform.autonomous.ResultCollector;
 import dk.statsbiblioteket.medieplatform.autonomous.TreeProcessorAbstractRunnableComponent;
@@ -15,7 +16,7 @@ import dk.statsbiblioteket.medieplatform.autonomous.TreeProcessorAbstractRunnabl
 /**
  * Releases a batch from it's forced online status in the bitrepository
  */
-public class BitrepositoryReleaserComponent extends TreeProcessorAbstractRunnableComponent {
+public class BitrepositoryReleaserComponent extends AbstractRunnableComponent<Batch> {
     private final Logger log = LoggerFactory.getLogger(getClass());
 
     public static final String RELEASE_ONLINE_COMMAND = "bitrepository.ingester.releaseOnlineCommand";
